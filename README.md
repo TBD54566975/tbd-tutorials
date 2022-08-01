@@ -1,20 +1,73 @@
-# $PROJECT_NAME README
+# TBD Tutorials and Examples
+This repository is a prototype collection of examples and 
+tutorials using TBD frameworks, SDKs, and services. It's a place for the 
+community to contribute ideas demonstrating concepts provided by TBD APIs. 
+The goal here is to give our tutorials and examples a common format, enabling 
+us to:
 
-Congrats, project leads! You got a new project to grow!
+* Publish tutorials and examples as documentation on 
+  [developer.tbd.website](developer.tbd.website).
+* Test example code in CI to ensure it
+  remains runnable as development progresses
+* Highlight the community authors who contributed the example
+* Build a deep knowledge base over time
+* Give developers a starting point for their own innovation
 
-This stub is meant to help you form a strong community around your work. It's yours to adapt, and may 
-diverge from this initial structure. Just keep the files seeded in this repo, and the rest is yours to evolve! 
+## Tutorials and Examples Format
+_This section is a draft open to suggestions and modifications._
 
-## Introduction
+Each example/tutorial will likely contain the following components:
 
-Orient users to the project here. This is a good place to start with an assumption
-that the user knows very little - so start with the Big Picture and show how this
-project fits into it. It may be good to reference/link the broader architecture in the
-`collaboration` repo or the developer site here.
+* Documentation
+* Code
+* Tests
 
-Then maybe a dive into what this project does.
+The motivation for this work stemmed from Frank Hinek's [excellent 
+blog post](https://frankhinek.com/getting-started-with-tbds-ssi-service/) 
+highlighting early usage of the SSI Service. We asked ourselves: what if this
+could be tested, publishable, and repeatable for other use cases? Thus his 
+example becomes a nice testing ground to port into a common format and build
+system we define here.
 
-Diagrams and other visuals are helpful here. Perhaps code snippets showing usage.
+## Ideas 
+_Brainstorm here._
+
+## Open Questions
+
+These are open for discussion as Issues:
+
+* [CLI Tools and Scripting Requirements Discussion](https://github.com/TBD54566975/tbd-tutorials/issues/1)
+
+## Analogy to Similar Systems
+
+The Quarkus project runs a similar setup for tutorials, examples, and 
+quickstarts called ["Guides"](https://quarkus.io/guides/).
+
+Each guide has a docs page, kind of like a blog post which shows how 
+to run it and what it’s about. For example, 
+[this is the Getting Started doc](https://quarkus.io/guides/getting-started).
+
+The sections in the docs are generally:
+
+* How to get the example
+* How to build it
+* How to run it
+* What concept it’s showing
+* How to test it
+* How to apply similar concepts in your code
+
+All of the quickstarts live in 
+[one repo](https://github.com/quarkusio/quarkus-quickstarts).
+
+And because there’s a common way they’re built, they can be surfaced 
+on the site and tested and run in a uniform way.
+It’s a nice example because the end user facing thing is surfaced on the 
+site, everything’s tested, and everything is backed by real code 
+that’s protected against going stale (tests would fail, prompting 
+maintenance and a check against docs to ensure they’re up to date).
+
+## Project Information
+_TODO_
 
 Project leads should complete, alongside this `README`:
 * [CODEOWNERS](./CODEOWNERS) - set project lead(s)
