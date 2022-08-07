@@ -29,6 +29,42 @@ could be tested, publishable, and repeatable for other use cases? Thus his
 example becomes a nice testing ground to port into a common format and build
 system we define here.
 
+## Running the Build
+
+---
+
+The build for these tutorials and examples does two things:
+
+* Creates the unified Markdown docs from the snippits and fragments
+* Runs the tests (NOT YET IMPLEMENTED).
+
+Right now there's no build script; the build is done through the CLI in the commands below.
+When done prototyping we can make a build system for this.
+
+**NOTE**
+
+IDK man, Pandoc can't seem to create directories (or files when running 
+it in Docker mode). So we create the output directory via `mkdir` or similar depending on your system,
+, and i'll be cool to not have to make users install Pandoc 
+on their system by running it via Docker which is already a prereq. - ALR
+
+---
+
+### Script to run build via Docker
+```shell
+
+$> mkdir build
+$> touch build/GETTING_STARTED_SSI_SERVICE.md 
+$> docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc/core:2.19.0.0 getting-started-ssi-service/GETTING_STARTED_SSI_SERVICE.md -o build/GETTING_STARTED_SSI_SERVICE.md
+```
+
+
+### Script to run build via Pandoc on system
+```shell
+$> mkdir build
+$> pandoc getting-started-ssi-service/GETTING_STARTED_SSI_SERVICE.md -o build/GETTING_STARTED_SSI_SERVICE.md
+```
+
 ## Ideas 
 _Brainstorm here._
 
