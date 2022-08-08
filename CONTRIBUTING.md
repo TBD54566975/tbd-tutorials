@@ -14,12 +14,12 @@ This guide is for you.
 
 ## Development Prerequisites
 
-| Requirement                     | Tested Version  | Installation Instructions                                                             |
-|---------------------------------|-----------------|---------------------------------------------------------------------------------------|
-| Java                            | 17.0.2          | Below, recommended via [SDKMan](https://sdkman.io)                                    |
-| [JBang](https://www.jbang.dev/) | 0.96.4          | Below, recommended via [SDKMan](https://sdkman.io)                                    |
-| Pandoc                          | 2.9.2.1         | Below                                                                                 |
-| Docker Engine and Compose       | 19.03.8 (Linux) | Below, or via [Docker Desktop](https://docs.docker.com/desktop/#download-and-install) |
+| Requirement                     | Tested Version  | Installation Instructions                                                                                    |
+|---------------------------------|-----------------|--------------------------------------------------------------------------------------------------------------|
+| Java                            | 18.0.2          | Below, recommended via [SDKMan](https://sdkman.io)                                                           |
+| [JBang](https://www.jbang.dev/) | 0.96.4          | Below, recommended via [SDKMan](https://sdkman.io)                                                           |
+| Gitdown                         | 3.1.5           | `npm install gitdown -g`, requires `npm` installation recommended via [`nvm`](https://github.com/nvm-sh/nvm) |
+| Docker Engine and Compose       | 19.03.8 (Linux) | Below, or via [Docker Desktop](https://docs.docker.com/desktop/#download-and-install)                        |
 
 ### Java and JBang
 
@@ -69,36 +69,6 @@ $> jbang --version
 0.96.4
 ```
 
-### Pandoc
-
-[Pandoc](https://pandoc.org/index.html) is a tool that can import external
-files as imports into Markdown; it's what lets us externalize code snippets for
-automated running as scripts and tests, and reuse the same code in our documentation.
-
-It has [multiplatform installation instructions](https://pandoc.org/installing.html),
-for instance on Fedora/RHT based Linux systems:
-
-```shell
-$> sudo dnf install pandoc
-```
-
-...or using macOS Homebrew:
-
-```shell
-$> brew install pandoc
-```
-
-You may test your installation:
-
-```shell
-$> pandoc --version
-pandoc 2.9.2.1
-Compiled with pandoc-types 1.20, texmath 0.12.0.2, skylighting 0.8.5
-Default user data directory: /home/alr/.local/share/pandoc or /home/alr/.pandoc
-Copyright (C) 2006-2020 John MacFarlane
-Web:  https://pandoc.org
-```
-
 ### Docker Engine and Compose Plugin
 
 Many of our services are built and run as containerized applications in the Docker format. 
@@ -146,40 +116,9 @@ Test Docker is running and working:
 $> docker run hello-world
 ```
 
-## Build (Java / Gradle)
+## Build (JBang)
 
-### macOS / Linux
-```shell
-$> ./gradlew build
-```
 
-### Windows
-```shell
-$> gradlew.bat build
-```
-
-## Test (Java / Gradle)
-
-### macOS / Linux
-```shell
-$> ./gradlew test
-```
-
-### Windows
-```shell
-$> gradlew.bat test
-```
-
----
-**NOTE**
-
-You may also combine Gradle build targets in one call, like:
-
-```shell
-$> ./gradlew clean build test
-```
-
----
 
 ## Communications
 

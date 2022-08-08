@@ -66,7 +66,12 @@ $> pandoc getting-started-ssi-service/GETTING_STARTED_SSI_SERVICE.md -o build/GE
 ```
 
 ## Ideas 
-_Brainstorm here._
+* Tool the Developer Site Documentation section with 
+  [Markdoc](https://markdoc.io/docs/overview)
+  * "Markdoc's React renderer makes it possible to use React components within 
+    Markdown content, supporting interactive features like tab switchers and collapsible 
+    sections. It is possible to implement custom renderers that introduce support for 
+    additional output formats and client frameworks."
 
 ## Open Questions
 
